@@ -1,0 +1,57 @@
+<template>
+   <!-- <div class="a"> color: var(--lwc-brandAccessible);  Action color</div> 
+   <div class="b">color-text-action-label Detail text color</div> 
+   <div class="c">    --lwc-colorTextHint: rgb(165, 43, 18);
+    --lwc-colorTextPlaceholder: rgb(165, 43, 18);
+    --lwc-colorTextWeak: rgb(165, 43, 18);
+    --lwc-colorBorderHint: rgb(165, 43, 18);
+    --lwc-colorTextLabel: rgb(165, 43, 18);
+    --lwc-colorTextActionLabel: rgb(165, 43, 18);
+    --lwc-tableColorTextHeader: rgb(165, 43, 18); Details text Color </div> 
+   <div class="d">    --lwc-colorBackgroundFeaturedBrandHover: #f78383;
+    --lwc-colorBackgroundButtonBrandHover: #f78383;
+    --lwc-colorBackgroundButtonBrandActive: #f78383;
+    --lwc-colorTextBrandHover: #f78383;
+    --lwc-colorBorderBrandHover: #f78383;
+    --lwc-colorBrandDarker: #f78383;
+    --lwc-colorBackgroundBrandPrimaryHover: #f78383;
+    --lwc-colorBackgroundBrandPrimaryActive: #f78383;
+    --lwc-brandAccessibleActive: #f78383;Action Color</div> 
+   <div class="e">    --lwc-colorTextLinkHover: #d60000;
+    --lwc-colorTextLinkActive: #d60000;
+    --lwc-brandTextLinkActive: #d60000;
+    --lwc-colorTextIconDefaultHover: #d60000;
+    --lwc-colorTextIconDefaultActive: #d60000; Link Color</div> 
+   
+   <div class="f">    --lwc-colorBorder: rgb(28, 35, 255);
+    --lwc-colorBorderSeparatorAlt: rgb(28, 35, 255);
+    --lwc-colorBorderInput: rgb(28, 35, 255);
+    --lwc-colorBorderButtonDefault: rgb(28, 35, 255);
+    --lwc-pageHeaderJoinedColorBorder: rgb(28, 35, 255);
+    --lwc-buttonColorBorderPrimary: rgb(28, 35, 255);
+    --lwc-cardColorBorder: rgb(28, 35, 255); border color</div> 
+   <div class="g">    --lwc-prmHeaderBackgroundColor: rgb(0, 213, 244); header background color</div> 
+  
+   <div class="h">    --lwc-prmNavigationMenuTextColor: rgb(4, 255, 0);
+    --lwc-brandNavigationColorText: rgb(4, 255, 0); navigation text color</div> 
+    <div class="i">    --lwc-prmNavigationMenuColor: rgb(136, 34, 34);
+        --lwc-brandNavigationBackgroundColor: rgb(136, 34, 34); navigation background color</div> 
+        <div class="j">    --lwc-dxpGBrandContrast2: rgba(73, 29, 29, 0.67);
+            --lwc-dxpGBrandContrast1: rgba(132, 52, 52, 0.67); overlay text color</div>  -->
+            <a href="https://www.google.com/calendar/event?action=TEMPLATE&text=Example%20Event&dates=20131124T010000Z/20131124T020000Z&details=Event%20Details%20Here&location=123%20Main%20St%2C%20Example%2C%20NY" target="_blank">Add to gCal</a>
+            <div onclick={clickTest}>microsoft</div>
+            <table>
+                <template for:each={events.data} for:item="e"  for:index="index">
+                <tr key={e.Id}>
+                    <td>{e.Id}</td>
+                        <td>{e.Description}</td>
+                        <td>{e.StartDateTime}</td>
+                        <td>{e.EndDateTime }</td>
+                        <td> <lightning-button label="Neutral" value={index} title="Non-primary action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button></td>
+                        <td> <lightning-button label="Add To Calender" value={index} title="Non-primary action" onclick={clickTest} class="slds-m-left_x-small"></lightning-button>                        </td>
+                    </tr>
+                </template>
+            </table>
+            
+
+</template>

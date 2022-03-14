@@ -1,0 +1,222 @@
+.dietCSSClass{
+  color: #43b2f8;
+  background-color: red;
+}
+
+
+.slds-truncate {
+ color: red;
+}
+
+
+
+  table{
+    background : #f3f4fb;
+    color : #9d9eb0;
+    width: 100%;
+    border-collapse: collapse;
+  border-spacing: 0;
+  font-family: sans-serif;
+ 
+  }
+  table thead{
+    background : #f3f4fb;
+    color : #9d9eb0;
+  }
+  table thead th{
+    padding: .75rem;
+    font-weight: bold;
+    font-size:.80rem;
+  }
+  table tbody td{
+    padding: .75rem;
+    font-size:1rem;
+  }
+  table tbody tr:nth-child(even){
+    background : #fafafc;
+    color:#56555c;
+  }
+  table tbody tr:nth-child(odd){
+    color : #56555c;
+  }
+  
+  /*  table tbody td:nth-child(1){
+      border-left: .5rem solid transparent;
+  } */
+  table tbody tr:nth-child(1){
+    border-left: 10px solid #2b35bc !important;
+  }
+  table tbody tr:nth-child(4){
+    border-left: .5rem solid #2b35bc !important;
+  }
+  
+  
+  .status{
+    display: flex;
+      background: #dcf2dd;
+      border-radius: 7%;
+      /* border: 0px solid red; */
+      font-size: .75rem;
+      justify-content: start;
+      align-items: center;
+      width: fit-content;
+      /* padding: .2rem; */
+      /* display: inline-block; */
+     padding: .2rem .8rem;
+      height: 19px;
+      /* line-height: 47px; */
+      border-radius: 25px;
+      background-color: #f1f1f1;
+       text-transform:capitalize;
+  
+  }
+  .dot{
+    width:10px;
+    height:10px;
+    background:black;
+    border-radius:50%;
+    margin-right:.25rem;
+  }
+  .green-back{
+    background : #def1de;
+    color : #4ca62f;
+  }
+  .green-dot{
+   background: #4ca62f;
+  }
+  
+  .blue-back{
+    background:#d3ecfc;
+    color:#43b2f8;
+  }
+  .blue-dot{
+    background:#43b2f8;
+  }
+  
+  .yello-back{
+    background:#fdf2d8;
+    color:#f6b142;
+  }
+  .yello-dot{
+    background:#f6b142;
+  }
+  
+  
+  /* check box start */
+  .checkbox-label {
+      display: block;
+      position: relative;
+      margin: auto;
+      cursor: pointer;
+      font-size: 22px;
+      line-height: 24px;
+      height: 24px;
+      width: 24px;
+      clear: both;
+  }
+  
+  .checkbox-label input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+  }
+  
+  .checkbox-label .checkbox-custom {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 18px;
+      width: 18px;
+      background-color: transparent;
+      border-radius: 3px;
+      transition: all 0.3s ease-out;
+      -webkit-transition: all 0.3s ease-out;
+      -moz-transition: all 0.3s ease-out;
+      -ms-transition: all 0.3s ease-out;
+      -o-transition: all 0.3s ease-out;
+      border: 1px solid #e0dee9;
+  }
+  
+  
+  .checkbox-label input:checked ~ .checkbox-custom {
+      background-color: #2839cd;
+      border-radius: 3px;
+      -webkit-transform: rotate(0deg) scale(1);
+      -ms-transform: rotate(0deg) scale(1);
+      transform: rotate(0deg) scale(1);
+      opacity:1;
+      border: 1px solid #f8f7fe;
+  }
+  
+  
+  .checkbox-label .checkbox-custom::after {
+      position: absolute;
+      content: "";
+      left: 12px;
+      top: 12px;
+      height: 0px;
+      width: 0px;
+      border-radius: 3px;
+      border: solid #FFF;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(0deg) scale(0);
+      -ms-transform: rotate(0deg) scale(0);
+      transform: rotate(0deg) scale(0);
+      opacity:1;
+      transition: all 0.3s ease-out;
+      -webkit-transition: all 0.3s ease-out;
+      -moz-transition: all 0.3s ease-out;
+      -ms-transition: all 0.3s ease-out;
+      -o-transition: all 0.3s ease-out;
+  }
+  
+  
+  .checkbox-label input:checked ~ .checkbox-custom::after {
+    -webkit-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+    opacity:1;
+    left: 5px;
+    top: 0px;
+    width: 6px;
+    height: 12px;
+    border: solid #FFF;
+    border-width: 0 2px 2px 0;
+    background-color: transparent;
+    border-radius: 0;
+  }
+  
+  
+  
+  /* For Ripple Effect */
+  .checkbox-label .checkbox-custom::before {
+      position: absolute;
+      content: "";
+      left: 10px;
+      top: 10px;
+      width: 0px;
+      height: 0px;
+      border-radius: 5px;
+      border: 2px solid #FFFFFF;
+      -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+      transform: scale(0);    
+  }
+  
+  .checkbox-label input:checked ~ .checkbox-custom::before {
+      left: -3px;
+      top: -3px;
+      width: 24px;
+      height: 24px;
+      border-radius: 5px;
+      -webkit-transform: scale(3);
+      -ms-transform: scale(3);
+      transform: scale(3);
+      opacity:0;
+      z-index: 999;
+      transition: all 0.3s ease-out;
+      -webkit-transition: all 0.3s ease-out;
+      -moz-transition: all 0.3s ease-out;
+      -ms-transition: all 0.3s ease-out;
+      -o-transition: all 0.3s ease-out;
+  }

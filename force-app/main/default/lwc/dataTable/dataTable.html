@@ -1,0 +1,30 @@
+<template>
+    <lightning-card title="Accounts" icon-name="utility:user">
+        <div class="slds-card__body_inner">
+                <div class="slds-grid slds-gutters">
+                        <div class="slds-col slds-size_3-of-12">
+                            <lightning-input class="searchbar"
+                                label="Search by ID, Member Name,Status, Network"
+                                value="keyword"
+                                onchange={handleKeywordChange}>
+                            </lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_3-of-12">
+                                <lightning-input type="date" name="input1" label="Service Date From" ></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_3-of-12">
+                                <lightning-input type="date" name="input1" label="Service Date To" ></lightning-input>
+                        </div>
+                      </div>
+           <br>
+            <template if:true={accList}>
+                <lightning-datatable class="test" hide-checkbox-column  data={accList} columns={columns} key-field="Id">
+                </lightning-datatable>
+            </template>
+            <template if:true={error}>
+                {error}
+            </template>
+        </div></lightning-card>
+   
+    
+</template>

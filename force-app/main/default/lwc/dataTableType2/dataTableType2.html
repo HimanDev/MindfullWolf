@@ -1,0 +1,39 @@
+<template>
+        <lightning-card title="Accounts" icon-name="utility:user">
+            <div class="slds-card__body_inner">
+                    <div class="slds-grid slds-gutters">
+                            <div class="slds-col slds-size_3-of-12">
+                                <lightning-input class="searchbar"
+                                    label="Search by ID, Member Name,Status, Network"
+                                    value=""
+                                    onchange={handleKeywordChange}>
+                                </lightning-input>
+                            </div>
+                            <div class="slds-col slds-size_2-of-12">
+                                    <lightning-input type="date" onchange={handleSDFChange} name="input1" label="Service Date From" ></lightning-input>
+                            </div>
+                            <div class="slds-col slds-size_2-of-12">
+                                    <lightning-input type="date" onchange={handleSDTChange} name="input1" label="Service Date To" ></lightning-input>
+                            </div>
+                            <div class="slds-col slds-size_2-of-12">
+                                    <lightning-combobox
+                                    name="progress"
+                                    label="Status"
+                                    value={value}
+                                    placeholder="Select Progress"
+                                    options={options}
+                                    onchange={handleChange} ></lightning-combobox>
+                                    </div>
+                          </div>
+               <br>
+                <template if:true={accList}>
+                    <lightning-datatable class="test" hide-checkbox-column  data={accList} columns={columns} key-field="Id">
+                    </lightning-datatable>
+                </template>
+                <template if:true={error}>
+                    {error}
+                </template>
+            </div></lightning-card>
+       
+        
+    </template>

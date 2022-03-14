@@ -1,0 +1,99 @@
+<template>
+        <lightning-card title="Doctors" icon-name="utility:user">
+            <div class="slds-card__body_inner">
+    <div class="slds-grid slds-gutters ">
+        <div class="slds-col slds-size_2-of-3">
+            <div class="slds-form-element">
+                <label class="slds-form-element__label" for="text-input-id-1"></label>
+                <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left">
+                    <svg class="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default" aria-hidden="true">
+                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
+                    </svg>
+                    <input value={searchTerm} onkeyup={handleSearchTermChange} type="text" id="text-input-id-1" placeholder="search by doctor's name" class="slds-input" />
+                </div>
+            </div>
+        </div>
+        <div class="slds-col slds-size_1-of-3">
+            <div class="slds-form-element">
+                <label class="slds-form-element__label" for="text-input-id-1"></label>
+                <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left">
+                    <svg class="slds-icon slds-input__icon slds-input__icon_left slds-icon-text-default" aria-hidden="true">
+                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#location"></use>
+                    </svg>
+                    <input type="text" id="text-input-id-2" placeholder="search by zipcode" class="slds-input" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="slds-grid slds-gutters" style="height: 31rem;margin-top:1rem">
+        <div class="slds-col slds-size_2-of-5 slds-scrollable" style="background: white;border-right: 2px solid #efefef; height: -webkit-fill-available;">
+            <div class="slds-coordinates">
+
+                <ul class="slds-coordinates__list">
+                    <template for:each={test} for:item="t">
+                        <li key={t.id} class={getCSS} data-t={t}>
+                            <a if:true={t.isavailable} class="slds-button slds-button_neutral msg-not-accept disabled" href="javascript:void(0);">This
+                                Provider is not acception any patient</a>
+                            <div class="doc-media">
+                                <span class="slds-avatar slds-avatar_circle slds-avatar_large">
+                                    <img alt="Person name" src={appResources.doc1} title="Person name" />
+                                </span>
+                                <div class="doc-media-body">
+                                    <div class="doc-media-body-header">
+
+                                        <span class="slds-text-heading_medium" style="font-weight: bold;
+                                    margin-bottom: 0.25rem;font-size: 1rem;">{t.name}</span>
+                                        <span><svg class="slds-icon slds-icon-text-default" style="fill: rgb(240, 183, 66);
+                                        height: 24px;
+                                        width: 21px;
+                                        padding: 0px;
+                                        margin: -5px;
+                                        margin-right: 2px;" aria-hidden="true">
+                                                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#bookmark"></use>
+                                            </svg>Top rated .<span>100% recomended (43 ratings) . $$$$</span></span>
+                                    </div>
+
+                                    <div class="doc-media-body-links">
+                                        <a class="slds-button slds-button_neutral" href="javascript:void(0);">Easy to book
+                                            appointments
+                                        </a>
+                                        <a class="slds-button slds-button_neutral" href="javascript:void(0);">Easy to get
+                                            in touch with</a>
+                                        <a class="slds-button slds-button_neutral" href="javascript:void(0);">+4</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- <div class="divider"></div> -->
+                        </li>
+                    </template>
+
+                </ul>
+            </div>
+        </div>
+        <div class="slds-col slds-size_3-of-5">
+            <!-- <lightning-card title={cardTitle} icon-name="standard:address" style=" height: -webkit-fill-available;" >
+                        <lightning-map   
+                        map-markers={mapMarkers}
+                        markers-title={markersTitle}
+                        list-view="hidden"
+                        onmarkerselect={handleMarkerSelect}
+                        selected-marker-value={selectedMarkerValue} 
+                        zoom-level="12"></lightning-map>
+                    </lightning-card> -->
+            <!-- <lightning-map map-markers={mapMarkers} zoom-level="12"></lightning-map> -->
+            <!-- <div class="slds-map"> -->
+            <!-- <div lwc:dom="manual" class="g-map" id="map"></div> -->
+            <!-- </div> -->
+            <div class="slds-map" style=" height: -webkit-fill-available;">
+                <iframe id="GoogleMapID" title="Google Maps iframe" src="https://www.google.com/maps/embed/v1/place?q=1%20market%2C%20san%20francisco&amp;key=AIzaSyDliLquGXGts9S8YtkWVolSQEJdBL1ZuWc"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+</lightning-card>
+</template>

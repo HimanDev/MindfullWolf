@@ -1,0 +1,30 @@
+.a{
+    color: var(--lwc-brandAccessible);
+}
+.b{
+    color: var(--lwc-colorTextActionLabel);
+}
+.c{
+    color: var(--lwc-colorTextHint);
+}
+.d{
+    color: var(--lwc-brandAccessibleActive);
+}
+.e{
+    color: var(--lwc-colorTextLinkActive);
+}
+.f{
+    color: var(--lwc-colorBorderButtonDefault);
+}
+.g{
+    color: var(--lwc-prmHeaderBackgroundColor);
+}
+.h{
+    color: var(--lwc-prmNavigationMenuTextColor);
+}
+.i{
+    color: var(--lwc-prmNavigationMenuColor);
+}
+.j{
+    color: var( --lwc-dxpGBrandContrast2);
+}
